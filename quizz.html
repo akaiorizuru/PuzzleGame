@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Puzzle Game</title>
+    <style>
+        body{
+            background-color: white;
+        }
+        .hideElement{
+            display:none;
+        }
+        .counterBox{
+            margin: 2em;
+            padding: 2em;
+            border-radius: 1em;
+            background-color: #ff7338;
+            color: white;
+            font-size: 18px;
+            width: fit-content;
+        }
+        .Puzzle{
+            margin: 2em;
+        }
+        header{
+            background-color: #ff7338;
+            color: white;
+            padding: 3em;
+        }
+        .validationButton{
+            background-color: #ffffff;
+            border-color: #ff7338;
+            padding : 5px;
+            border-radius : 5px;
+            color : #ff7338;
+            border-style: solid;
+        }
+        .clickSpan{
+            padding: 1em;
+            margin-bottom:0.5em;
+            margin-top:2em;
+            background-color: rgba(255, 115, 56,0.7);
+            color: white;
+
+        }
+        .cr{
+            color: rgba(22,22,22,0.8);
+        }
+        .line{
+            border-color: #ff7338;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Voici un petit jeu de devinette</h1>
+        <div>
+            Tu pourra tester à plusieurs reprises la saisie des réponses. Ton score sera comptabilité automatiquement en bas de la page!
+            <br>
+            Attention, tes résultats sont remises à 0 quand tu vas réinitialiser la page.
+        </div>
+    </header>
+
+    
+
+    
+    <div class="Puzzle">
+        <img src="puzzle2.png" alt="puzzle2">
+        <p>
+            Tu peux saisir le résultat de la dernière ligne en te référençant aux indices des lignes précédentes .
+        </p>
+        <input type="text" id="answer2" value="">
+        <p id="indication2"></p>
+        <button onclick="myFunction2()" id="button2" class="validationButton">Valider</button>
+    </div>
+    <div class="line">
+        <hr>
+    </div>
+    <div class="Puzzle">
+        <!-- Generator: Adobe Illustrator 24.0.0, SVG Export Plug-In  -->
+        <img src="puzzle1.png" alt="puzzle1">
+        <p>
+            Tu peux saisir le résultat de la dernière ligne en te référençant aux indices des lignes précédentes .
+        </p>
+        <input type="text" id="answer1" value="">
+        <p id="indication1"></p>
+        <button onclick="myFunction()" id="button1" class="validationButton">Valider</button>
+        <br>
+        <br>
+        <div class="hideElement" id="indice1">
+            <span onclick="showElement1()" class="clickSpan" id="cliskspan1">Indice ?</span> 
+            <svg id="indiceElement1" class="hideElement" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="34.5px"
+            height="34.5px" viewBox="0 0 34.5 34.5" style="enable-background:new 0 0 34.5 34.5;" xml:space="preserve">
+                <style type="text/css">
+                    .st0{fill:none;stroke:#000000;stroke-width:5;stroke-miterlimit:10;}
+                </style>
+                <defs>
+                </defs>
+                <g>
+                    <g>
+                        <path d="M29.4,5.1v24.3H5.1V5.1H29.4 M34.4,0.1H0.1v34.3h34.3V0.1L34.4,0.1z"/>
+                    </g>
+                    <g>
+                        <line class="st0" x1="17.3" y1="34.5" x2="17.3" y2="0"/>
+                    </g>
+                    <line class="st0" x1="0" y1="17.3" x2="34.5" y2="17.3"/>
+                </g>
+            </svg>
+        </div>
+    </div>
+
+    <div class="line">
+        <hr>
+    </div>
+
+    <div class="Puzzle">
+        <img src="puzzle3.png" alt="puzzle3">
+        <p>
+            Tu peux saisir le résultat de la dernière ligne en te référençant aux indices des lignes précédentes .
+        </p>
+        <input type="text" id="answer3" value="">
+        <p id="indication3"></p>
+        <button onclick="myFunction3()" id="button3" class="validationButton">Valider</button>
+        <br>
+        <br>
+        <div class="hideElement" id="indice3">
+            <span onclick="showElement3()" class="clickSpan" id="cliskspan3">Indice ?</span> 
+            <div>
+
+                <img src="indice3.png" alt="indice3" id="indiceElement3" class="hideElement">
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+    function myFunction() {
+        $answer1 = document.getElementById("answer1").value;
+        $button1 = document.getElementById("button1");
+        $indication1 = document.getElementById("indication1");
+        // $pointGained = document.getElementById("pointGained").innerHTML;
+        $pointToNumber = parseInt( document.getElementById("pointGained").innerHTML);
+        // document.getElementById("pointGained").innerHTML = 2;
+    if($answer1 == "2021"){
+            $button1.innerHTML="corect";
+            $button1.setAttribute('class','hideElement');
+            $indication1.innerHTML="Bravo tu as trouvé la bonne réponse!";
+            $pointToNumber = $pointToNumber + 1;
+            // $pointToNumber = $pointToNumber + 1;
+            document.getElementById("pointGained").innerHTML = $pointToNumber;
+    }else{
+        $button1.innerHTML="Réessayer";
+        // $button1.setAttribute('class','hideElement');
+        $indication1.innerHTML="C'était pas la bonne réponse, dommage!";
+        document.getElementById("indice1").classList.remove("hideElement");
+        }
+    }
+
+    function myFunction2() {
+        $answer1 = document.getElementById("answer2").value;
+        $button1 = document.getElementById("button2");
+        $indication1 = document.getElementById("indication2");
+        // $pointGained = document.getElementById("pointGained").innerHTML;
+        $pointToNumber = parseInt( document.getElementById("pointGained").innerHTML);
+        // document.getElementById("pointGained").innerHTML = 2;
+    if($answer1 == "AVMN" || $answer1 == "avmn" || $answer1 == "Avmn"){
+            $button1.innerHTML="corect";
+            $button1.setAttribute('class','hideElement');
+            $indication1.innerHTML="Bravo tu as trouvé la bonne réponse!";
+            $pointToNumber = $pointToNumber + 1;
+            // $pointToNumber = $pointToNumber + 1;
+            document.getElementById("pointGained").innerHTML = $pointToNumber;
+    }else{
+        $button1.innerHTML="Réessayer";
+        // $button1.setAttribute('class','hideElement');
+        $indication1.innerHTML="C'était pas la bonne réponse, dommage!";
+        }
+    }
+
+
+
+    function myFunction3() {
+        $answer1 = document.getElementById("answer3").value;
+        $button1 = document.getElementById("button3");
+        $indication1 = document.getElementById("indication3");
+        $pointToNumber = parseInt( document.getElementById("pointGained").innerHTML);
+    if($answer1 == "Joyeux Noel" || $answer1 == "joyeux noel" || $answer1 == "Joyeux noel"|| $answer1 == "Joyeux noël" || $answer1 == "Joyeux Noël"){
+            $button1.innerHTML="corect";
+            $button1.setAttribute('class','hideElement');
+            $indication1.innerHTML="Bravo tu as trouvé la bonne réponse! Je te souhaite joyeuse fête de fin d'année en avance!";
+            $pointToNumber = $pointToNumber + 1;
+            document.getElementById("pointGained").innerHTML = $pointToNumber;
+    }else{
+        $button1.innerHTML="false";
+        $indication1.innerHTML="C'était pas la bonne réponse, dommage!";
+        document.getElementById("indice3").classList.remove("hideElement");
+        }
+    }
+
+
+
+    function showElement1(){
+        document.getElementById("indiceElement1").classList.remove("hideElement");
+        document.getElementById("cliskspan1").setAttribute('class','hideElement');
+    }
+
+
+    function showElement3(){
+        document.getElementById("indiceElement3").classList.remove("hideElement");
+        document.getElementById("cliskspan3").setAttribute('class','hideElement');
+    }
+
+
+
+    </script>
+    <div class="counterBox">
+        Ton score est de :
+        <div id="pointGained">
+          0
+        </div>
+    </div>
+
+    <div class="cr">
+        © Si Jia WANG
+    </div>
+</body>
+</html>
