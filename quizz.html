@@ -156,6 +156,9 @@
         // $button1.setAttribute('class','hideElement');
         $indication1.innerHTML="C'était pas la bonne réponse, dommage!";
         document.getElementById("indice1").classList.remove("hideElement");
+        if($pointToNumber == 3){
+                document.getElementById("foundOut").innerHTML = "Bravo tu as trouvé toutes les réponses!"
+            }
         }
     }
 
@@ -177,6 +180,9 @@
         $button1.innerHTML="Réessayer";
         // $button1.setAttribute('class','hideElement');
         $indication1.innerHTML="C'était pas la bonne réponse, dommage!";
+        if($pointToNumber == 3){
+                document.getElementById("foundOut").innerHTML = "Bravo tu as trouvé toutes les réponses!"
+        }
         }
     }
 
@@ -193,6 +199,9 @@
             $indication1.innerHTML="Bravo tu as trouvé la bonne réponse! Je te souhaite joyeuse fête de fin d'année en avance!";
             $pointToNumber = $pointToNumber + 1;
             document.getElementById("pointGained").innerHTML = $pointToNumber;
+            if($pointToNumber == 3){
+                document.getElementById("foundOut").innerHTML = "Bravo tu as trouvé toutes les réponses!"
+            }
     }else{
         $button1.innerHTML="false";
         $indication1.innerHTML="C'était pas la bonne réponse, dommage!";
@@ -220,6 +229,10 @@
         Ton score est de :
         <div id="pointGained">
           0
+        </div>
+        <br>
+        <div id="foundOut">
+
         </div>
     </div>
 
