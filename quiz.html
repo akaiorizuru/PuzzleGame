@@ -44,13 +44,22 @@
             margin-top:2em;
             background-color: rgba(255, 115, 56,0.7);
             color: white;
-
+        }
+        .clickSpan:hover{
+            background-color: rgba(255, 116, 56, 0.377);
+            transition: all .3s ease;
+            cursor: pointer;
         }
         .cr{
             color: rgba(22,22,22,0.8);
         }
         .line{
             border-color: #ff7338;
+        }
+        .validationButton:hover{
+            background-color: rgba(255, 116, 56, 0.178);
+            transition: all .3s ease;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -74,7 +83,9 @@
         </p>
         <input type="text" id="answer2" value="">
         <p id="indication2"></p>
-        <button onclick="myFunction2()" id="button2" class="validationButton">Valider</button>
+        <button onclick="myFunction2()" id="button2" class="validationButton">
+            Valider
+        </button>
     </div>
     <div class="line">
         <hr>
