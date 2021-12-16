@@ -20,12 +20,18 @@ Les éléments javascript, CSS et HTML sont regroupés en 1 seul [fichier](quiz.
 Ce jeu est composé de 3 puzzles où les personnes peuvent répondre, en fonction des réponses des messages différents seront affichés.
 Cette page intègre un petit compteur qui compterait les points gagnés lors des saisies de réponses justes. 
 Les visuelles sont entièrement réalisé "manuellement" à l'aide d'Illustrator: 
-- [Le puzzle 1](puzzle2.png) ![alt text](puzzle2.png)
-- [Le puzzle 2](puzzle1.png) ![alt text](puzzle1.png)
-- [Le puzzle 3](puzzle3.png) ![alt text](puzzle3.png)
-- [l'indice 2](indice1.png) ![alt text](indice1.png)
-- [l'indice 3](indice3.png) ![alt text](indice3.png)
-- [Le favicon](favicon.png) ![alt text](favicon.png)
+- [Le puzzle 1](puzzle2.png) :
+    ![alt text](puzzle2.png)
+- [Le puzzle 2](puzzle1.png) :
+    ![alt text](puzzle1.png)
+- [Le puzzle 3](puzzle3.png) : 
+    ![alt text](puzzle3.png)
+- [l'indice 2](indice1.png) :
+    ![alt text](indice1.png)
+- [l'indice 3](indice3.png) :
+    ![alt text](indice3.png)
+- [Le favicon](favicon.png) :
+    ![alt text](favicon.png)
 
 
 ## Les Puzzles
